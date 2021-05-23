@@ -66,10 +66,20 @@ nav.navbar ul.navbar-nav li a.nav-link {
     padding-left: 1.5rem;
     transition: all .5s ease;
 }
-nav.navbar ul.navbar-nav li a.nav-link:hover, nav.navbar ul.navbar-nav li a.nav-link.active {
+nav.navbar ul.navbar-nav li a.nav-link:hover,
+ nav.navbar ul.navbar-nav li a.nav-link.active {
     color: #0575e6;
     background-color: #fff;
-    border-radius: 20px;
+}
+nav.navbar.noTransparrent {
+    background-color: #fff;
+}
+nav.navbar.noTransparrent .nav-item .nav-link {
+    color: #0575e6;
+}
+nav.navbar.noTransparrent .nav-item .nav-link.active {
+    background-color: #0575e6;
+    color: #fff;
 }
 nav.navbar.noTransparrent button.navbar-toggler {
     margin: 30px auto; 
@@ -382,6 +392,62 @@ section.contacts .overlay .testimonials .slider .carousel .carousel-control-prev
 section.contacts .overlay .testimonials .slider .carousel .carousel-control-prev {
     transform: translate(-50%, -50%);
 }
+section.contacts .overlay .contact-info {
+    background-color: #fff;
+    padding: 50px;
+    margin: 0 100px;    
+}
+section.contacts .overlay .contact-info .title h3 {
+    font-size: 30px;
+    color: #0575e6;
+    margin-bottom: 35px;
+    line-height: 50px;
+}
+section.contacts .overlay .contact-info .form form .form-group input,
+section.contacts .overlay .contact-info .form form .form-group textarea {
+    border: 2px solid #f1f1f1;
+    border-radius: 3px;
+    font-family: ar-font;
+    font-size: 18px;
+    color: #c2c2c2;
+    line-height: 35px;
+    padding-right: 45px;
+}
+section.contacts .overlay .contact-info .form form .form-group textarea {
+    min-height: 220px;
+    max-height: 220px;
+}
+section.contacts .overlay .contact-info .form form .form-group {
+    position: relative;
+}
+
+section.contacts .overlay .contact-info .form form .form-group:before {
+    font-family: FontAwesome;
+    position: absolute;
+    top: 8px;
+    right: 30px;
+    font-size: 18px;
+    line-height: 25px;
+    color: #0575e6;
+    display: inline-block;
+}
+section.contacts .overlay .contact-info .form form .form-group:first-of-type:before {
+    content: "\f007";
+}
+section.contacts .overlay .contact-info .form form .form-group:nth-of-type(2):before {
+    content: "\f0e0";
+}   
+section.contacts .overlay .contact-info .form form button {
+    font-family: ar-font;
+    font-size: 24px;
+    color: #0575e6;
+    line-height: 25px;
+    background-color: #ffffff;
+    padding: 10px 70px;
+    border: 2px solid #0575e6;
+    border-radius: 3px;
+    margin-right: 15px;
+}
 section.contacts .overlay .contact-info ul.contact-us li {
     font-family: 'Open Sans';
     font-size: 16px;
@@ -417,12 +483,12 @@ section.contacts form .error {
     color: red;
 }
 
-
-
-
 @media (max-width:767px) {
     nav.navbar {
-        min-height: 80px;
+        min-height: 80px;   
+    }
+    nav.navbar .navbar-nav .nav-item  {
+      margin-right: 0 !important;
     }
 
     nav.navbar .container {
@@ -441,11 +507,22 @@ section.contacts form .error {
         align-items: center;
         justify-content: center;
     }
+    nav.navbar.noTransparrent {
+        background-color: #fff;
+    }
+    nav.navbar.noTransparrent .nav-item .nav-link {
+        color: #0575e6;
+    }
+     nav.navbar.noTransparrent .nav-item .nav-link.active {
+         background-color: #0575e6;
+         color: #fff;
+     }
     nav.navbar.noTransparrent button.navbar-toggler {
         margin: 0;
     }
     nav.navbar ul{
         padding-right: 0;
+       
     }
 
     /* قسم الخط الزمني */
@@ -460,6 +537,13 @@ section.contacts form .error {
     }
     section.licence ul.timeline:before {
         height: 90%;
+    }
+    section.contacts .overlay .testimonials .slider {
+        width: 95%;
+    }
+
+    section.contacts .overlay .testimonials .slider .carousel .carousel-item .carousel-caption {
+        padding: 60px 30px 20px;
     }
 }
 

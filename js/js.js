@@ -21,7 +21,7 @@ $(document).ready(function () {
 }); 
 $(window).scroll(function () {
 
-    if ($(this).scrollTop() >= 200) {               
+    if ($(this).scrollTop() >= 160) {               
         $("#navBar").addClass("noTransparrent") 
     }
     else {
